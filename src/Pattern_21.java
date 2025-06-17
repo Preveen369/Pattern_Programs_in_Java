@@ -1,20 +1,22 @@
+// Pattern 21
+
 public class Pattern_21 {
     static void printPattern(int n){
-        for(int i=0; i<n; i++){
-            for (int k = 1; k<=i; k++){
-                // i no of spaces
-                System.out.print("  ");      
+        int rows = n;
+        for (int i = rows;  i>=1; i--){
+            for (int k=n-i; k>=1; k--){
+                System.out.print("  ");
             }
-            for (int j = 1; j<=n-i; j++){
-                // n-i no of numbers
-                System.out.print(n-i+ " ");
+            int cols = (2*i)-1;
+            for (int j=cols; j>=1; j--){
+                System.out.print(i + " ");
             }
             System.out.println();
-        }   
+        }
     }
 
     public static void main(String[] args){
-        int input = 5;
+        int input = 4;
         printPattern(input);
     }
 }

@@ -1,13 +1,24 @@
-public class Pattern_58 {
+// Pattern 105
+
+public class Pattern_105 {
     static void printPattern(int n){
         int rows = n;
         for (int i = 1; i<=rows; i++){
-            int num = (i % 2 != 0) ? 1 : 2;
+            for (int k = 1; k<=n-i; k++){
+                System.out.print("  ");
+            } 
+            
+            int num = 1;
             for (int j = 1; j<=i; j++){
                 System.out.print(num + " ");
-                num += 2;
+                num *= 2;
             }
-            
+
+            num /= 4;
+            for (int j=i-1; j>=1; j--){
+                System.out.print(num + " ");
+                num /= 2;
+            }
             System.out.println();
         }
     }

@@ -1,10 +1,18 @@
+// Pattern 18
+
 public class Pattern_18 {
     static void printPattern(int n){
-        for (int i=n; i>=1; i--){
-            for (int j=1; j<=i; j++){
-                System.out.print(j + " ");
+        int rows = n;
+        for (int i=1; i<=rows; i++){
+            for (int k=0; k<=rows-i-1; k++){
+                System.out.print("  ");
             }
+            int cols = (2*i)-1;
+            for (int j=cols; j>=1; j--){
+                System.out.print(j + " ");
+            }          
             System.out.println();
+
         }
     }
 

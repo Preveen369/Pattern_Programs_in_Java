@@ -1,4 +1,6 @@
-public class Pattern_56 {
+// Pattern 106
+
+public class Pattern_106 {
     static void printPattern(int n){
         int rows = n;
         for (int i = 1; i<=rows; i++){
@@ -6,7 +8,7 @@ public class Pattern_56 {
             for (int j = 1; j<=i; j++){
                 System.out.print(num + " ");
                 num += 2;
-            }
+            }  
             
             System.out.println();
         }

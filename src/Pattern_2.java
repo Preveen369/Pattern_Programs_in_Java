@@ -1,10 +1,9 @@
-public class Pattern_2 {
-    static void printPattern(int n){
-        int rows = 2 * n + 1;
+// Pattern 2
 
-        for (int i = 0; i < rows; i++) {
-            int start = (i <= n) ? n - i : i - n;
-            for (int j = start; j <= n; j++) {
+public class Pattern_2 {
+    static void printPattern(int n) {
+        for (int i=1; i<n+1; i++){
+            for (int j=1; j<n+1; j++){
                 System.out.print(j + " ");
             }
             System.out.println();
@@ -12,7 +11,7 @@ public class Pattern_2 {
     }
 
     public static void main(String[] args) {
-        int input = 3;
+        int input = 5;
         printPattern(input);
     }
 }

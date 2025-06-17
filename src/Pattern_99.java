@@ -1,12 +1,13 @@
-public class Pattern_53 {
+// Pattern 99
+
+public class Pattern_99 {
     static void printPattern(int n){
-        for (int i=1; i<=n; i++){
-            for (int j=i; j<=n; j++){
+        int rows = 2 * n + 1;
+        for (int i=0; i<rows; i++){
+            int end = (i<=n) ? n-i : i-n;
+            for (int j=0; j<=end; j++){
                 System.out.print(j + " ");
-            }
-            for (int j=1; j<i; j++){
-                System.out.print(j+ " ");
-            }
+            } 
             System.out.println();
         }
     }

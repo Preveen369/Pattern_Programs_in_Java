@@ -1,14 +1,15 @@
-// Pattern 41
+// Pattern 85
 
-public class Pattern_41 {
-    static void printPattern(int n){
-        for (int i = 1; i <= n; i++) {
+public class Pattern_85 {
+    static void printPattern(int n) {
+        for (int i = n; i >= 1; i--) {
             for (int j = 1; j <= n; j++) {
-                if (j == i || j == n - i + 1) {
-                    System.out.print(i + " ");
+                if (i > j) {
+                    System.out.print("* ");
                 } else {
-                    System.out.print("  "); 
+                    System.out.print((n - j + 1) + " ");
                 }
+
             }
             System.out.println();
         } 

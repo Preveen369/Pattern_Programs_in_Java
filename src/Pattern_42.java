@@ -1,17 +1,21 @@
+// Pattern 42
+
 public class Pattern_42 {
     static void printPattern(int n){
-        int rows = 2 * n + 1;
-        for (int i=0; i<rows; i++){
-            int start = (i<=n) ? n-i : i-n;
-            for (int j=start; j>=0; j--){
-                System.out.print(j + " ");
-            } 
-            System.out.println(); 
-        }
+        for (int i = 5; i >= 1; i--) {
+            for (int j = n; j >= 1; j--) {
+                if (j == i || j == n - i + 1) {
+                    System.out.print(i + " ");
+                } else {
+                    System.out.print("  "); 
+                }
+            }
+            System.out.println();
+        } 
     }
 
-    public static void main(String[] args){
-        int input = 4;
+    public static void main(String[] args) {
+        int input = 5; 
         printPattern(input);
     }
 }

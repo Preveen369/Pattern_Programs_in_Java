@@ -1,22 +1,24 @@
+// Pattern 26
+
 public class Pattern_26 {
     static void printPattern(int n){
-        for (int i=0; i<=n; i++){
-            for (int k=0; k<n-i; k++){
+        for (int i=1; i<=n+1; i++){
+            for (int k=0; k<=n-i; k++){
                 System.out.print("  ");
             }
-            for (int j=n-i; j<=n; j++){
+            for (int j=n; j>=n-i+1; j--){
                 System.out.print(j + " ");
             }
             System.out.println();
-        }
-
+        } 
         for (int i=1; i<=n; i++){
             for (int k=0; k<i; k++){
                 System.out.print("  ");
             }
-            for (int j=i; j<=n; j++){
+            for (int j=n; j>=i; j--){
                 System.out.print(j + " ");
             }
+
             System.out.println();
         }
     }

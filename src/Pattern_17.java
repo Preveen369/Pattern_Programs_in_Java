@@ -1,10 +1,18 @@
+// Pattern 17
+
 public class Pattern_17 {
     static void printPattern(int n){
-        for (int i=1; i<=n; i++){
-            for (int j=n; j>=i; j--){
-                System.out.print(i + " ");
+        int rows = n;
+        for (int i=1; i<=rows; i++){
+            for (int k=0; k<=rows-i-1; k++){
+                System.out.print("  ");
             }
+            int cols = (2*i)-1;
+            for (int j=1; j<=cols; j++){
+                System.out.print(j + " ");
+            }          
             System.out.println();
+
         }
     }
 
@@ -13,3 +21,4 @@ public class Pattern_17 {
         printPattern(input);
     }
 }
+

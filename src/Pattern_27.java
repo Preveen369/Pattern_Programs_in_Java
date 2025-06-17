@@ -1,21 +1,30 @@
+// Pattern 27
+
 public class Pattern_27 {
     static void printPattern(int n){
-        int rows = n;
-        for (int i=1; i<=rows; i++){
-            for (int k=0; k<=rows-i-1; k++){
+        for (int i=0; i<=n; i++){
+            for (int k=0; k<n-i; k++){
                 System.out.print("  ");
             }
-            int cols = (2*i)-1;
-            for (int j=cols; j>=1; j--){
+            for (int j=n-i; j<=n; j++){
                 System.out.print(j + " ");
-            }          
+            }
             System.out.println();
+        }
 
+        for (int i=1; i<=n; i++){
+            for (int k=0; k<i; k++){
+                System.out.print("  ");
+            }
+            for (int j=i; j<=n; j++){
+                System.out.print(j + " ");
+            }
+            System.out.println();
         }
     }
 
     public static void main(String[] args){
-        int input = 5;
+        int input = 3;
         printPattern(input);
     }
 }

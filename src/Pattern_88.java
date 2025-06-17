@@ -1,11 +1,13 @@
-public class Pattern_61 {
+// Pattern 88
+
+public class Pattern_88 {
     static void printPattern(int n){
-        for (int i = 1; i <= n; i++) {
-            for (int j = 1; j <= n; j++) {
-                if (j == i || j == n - i + 1) {
+        for (int i = 0; i <= n; i++) {
+            for (int j = 0; j <= i; j++) {
+                if (j == 0){
                     System.out.print(i + " ");
-                } else {
-                    System.out.print("  "); 
+                } else{
+                    System.out.print("* ");
                 }
             }
             System.out.println();

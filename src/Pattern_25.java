@@ -1,22 +1,19 @@
+// Pattern 25
 public class Pattern_25 {
     static void printPattern(int n){
-        int rows = n;
-        for (int i=1; i<=rows; i++){
-            for (int k=0; k<=rows-i-1; k++){
-                System.out.print("  ");
-            }
-            int cols = (2*i)-1;
-            for (int j=1; j<=cols; j++){
-                System.out.print(j + " ");
-            }          
-            System.out.println();
+        int rows = 2 * n + 1;
 
+        for (int i = 0; i < rows; i++) {
+            int start = (i <= n) ? n - i : i - n;
+            for (int j = start; j <= n; j++) {
+                System.out.print(j + " ");
+            }
+            System.out.println();
         }
     }
 
-    public static void main(String[] args){
-        int input = 5;
+    public static void main(String[] args) {
+        int input = 3;
         printPattern(input);
     }
 }
-

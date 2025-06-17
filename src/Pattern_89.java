@@ -1,10 +1,11 @@
-// Pattern 3
+// Pattern 89
 
-public class Pattern_3 {
+public class Pattern_89 {
     static void printPattern(int n){
-        for (int i = 0; i < n; i++) {
-            for (int j = 1; j <= n; j++) {
-                System.out.print(n-i + " ");
+        for (int i=n; i>=0; i--){
+            System.out.print(i + " ");
+            for (int j=0; j<i; j++){
+                System.out.print("* ");
             }
             System.out.println();
         }

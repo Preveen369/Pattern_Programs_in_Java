@@ -1,14 +1,20 @@
+// Pattern 11
+
 public class Pattern_11 {
     static void printPattern(int n){
-        for (int i=n; i>=0; i--){
-            for (int j=0; j<i; j++){
-                System.out.print("* ");
+        for (int i=1; i<=n; i++){
+            for (int k=1; k<=n-i; k++){
+                System.out.print("  ");
             }
-            System.out.print(i + "\n");
+            for (int j=1; j<=i; j++){
+                System.out.print(i + " ");
+            }
+            System.out.println();
         }
     }
+
     public static void main(String[] args){
-        int input=5;
+        int input = 5;
         printPattern(input);
     }
 }
